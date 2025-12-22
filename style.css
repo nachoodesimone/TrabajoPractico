@@ -36,8 +36,13 @@ body {
     padding: 0;
 }
 
+.main {
+    margin: 0 auto;
+}
+
 .content-container {
     max-width: 1022px;
+    margin: 0 auto;
 }
 
 .headerlayout {
@@ -145,6 +150,10 @@ body {
     font-weight: 700;
 }
 
+.header__mobile{
+    display: none;
+}
+
 .titles__center {
     text-align: center;
     width: 100%;
@@ -206,40 +215,41 @@ body {
     align-items: center;
 }
 
-.cards-secundary {
-    margin: 0px 24px;
-    padding: 32px 40px;
-    background-color: #360c72;
-    border-radius: 32px;
-    max-width: 1022px;
-    gap: 32px;
+.banner-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    background-color: #2b0071;
+    padding: 40px 60px;
+    border-radius: 32px;
+    color: white;
+    font-family: sans-serif;
+    margin: 0 auto;
+    max-width: 1022px;
 }
 
-.cards-secundary__title {
-    font-size: 30px;
-    line-height: 2rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    margin: 0px;
-    max-width: 262px;
+.texto-contenido h1 {
+    margin: 0 0 10px 0;           
+    font-size: 2.5rem;
 }
 
-.cards-secundary__text {
-    font-size: 18px;
-    line-height: 1.375rem;
-    font-weight: 400;
-    color: #FFFFFF;
-    margin: 8px 0px 0px;
+.texto-contenido p {
+    margin: 0;
+    font-size: 1.1rem;
 }
 
-.card-secundary__text-boxes {
-    display: flex;
-    flex-direction: column;
-    max-width: 670px;
-    width: 100%;
-    gap: 16px;
+.boton-conocer {
+    background-color: white;
+    color: #5d21d1;
+    padding: 15px 35px;
+    border-radius: 50px;           
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;           
+}
+
+.divider-horizontal {
+    height: 32px;
 }
 
 .content-container .payment-options__layout {
@@ -274,8 +284,8 @@ body {
     width: 100%;
     overflow: hidden;
 }
-.card-reverse
-{
+
+.card-reverse {
     flex-direction: row-reverse;
 }
 
@@ -383,4 +393,150 @@ body {
 .footer__link:hover {
     text-decoration: underline;
     color: #652BDF
+}
+
+
+@media (width < 992px)
+{
+    
+    .header__nav
+    {
+        display: none;
+    }
+    .header__mobile
+    {
+        display: block;
+        width: 100%;
+        min-width: 300px;
+    }
+    .header__layout
+    {
+        display: flex;
+        justify-content: center;
+        min-height: 72px;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100%;
+    }
+    .icon-mobile-btn
+    {
+        font-size: 24px;
+        background: none;
+        border: none; 
+        color: #000000;
+        font-weight: 700;
+            
+    }
+    .icon__mobile-container 
+    {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        left: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo__mobile
+    {
+        max-width: 42px;
+        max-height: 40px;
+    }
+    .content-container
+    {
+        max-width: 852px;
+    }
+    h1 
+    {
+        font-size: 30px;
+        text-align: center;
+        line-height: 2.25rem;
+    }
+    .page 
+    {
+        padding: 0 20px;
+    }
+}
+@media (width < 768px)
+{
+    
+    .cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    }
+    
+    .cards-primary {
+    width: 100%;
+    max-width: none;
+
+    }
+    .card__title
+    {
+        max-width: none;
+    }
+    .card__text
+    {
+        max-width: none;
+    }
+
+    .banner-container
+    {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .texto-contenido
+    {
+        line-height: 1.625rem;
+        font-size: 24px;
+    }
+    .payment-options--subtitle
+    {
+        font-size: 14px;
+    }
+    .header__buttonsec
+    {
+        width: 100%;
+    }
+    .payment-options-card
+    {
+        flex-direction: column-reverse;
+    }
+    .payment-options-card-title
+    {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    .payment-options-card-subtitle
+    {
+        font-size: 16px;
+    }
+    .payment-options--image
+    {
+        max-width: none;
+    }
+    .header__buttonsec
+    {
+        width: 100%;
+    }
+    .content-container .footer__layout
+    {
+        align-items: center;
+
+    }
+    .footer__nav 
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .footer__line
+    {
+        /* No se achica, no crece, solo ocupa un 48% del contenedor */
+        flex: 0 0 48%;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
 }
