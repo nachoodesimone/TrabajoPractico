@@ -137,6 +137,12 @@ body {
     font-weight: 700;
 }
 
+.header__buttonpri:hover {
+    background-color:#e4d7ff;
+    cursor: pointer;
+    color:#360c72;
+}
+
 .header__buttonsec {
     background-color: #652BDF;
     color: #FFFFFF;
@@ -148,6 +154,12 @@ body {
     font-size: 14px;
     line-height: 1.5rem;
     font-weight: 700;
+}
+
+.header__buttonsec:hover {
+    background-color:#e4d7ff;
+    cursor: pointer;
+    color:#360c72;
 }
 
 .header__mobile{
