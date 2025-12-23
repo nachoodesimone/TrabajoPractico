@@ -534,7 +534,6 @@ body {
     
     .footer__line
     {
-        /* No se achica, no crece, solo ocupa un 48% del contenedor */
         flex: 0 0 48%;
         margin-right: 0;
         margin-bottom: 24px;
